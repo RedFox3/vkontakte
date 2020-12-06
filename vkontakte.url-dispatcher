@@ -1,0 +1,18 @@
+[
+  {
+    "protocol": "http",
+    "domain-suffix": "vk.com"
+  },
+  {
+    "protocol": "https",
+    "domain-suffix": "vk.com"
+  },
+  {
+    "protocol": "http",
+    "domain-suffix": "m.vk.com"
+  },
+  {
+    "protocol": "https",
+    "domain-suffix": "m.vk.com"
+  }
+]

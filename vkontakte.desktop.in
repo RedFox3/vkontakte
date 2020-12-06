@@ -1,0 +1,11 @@
+[Desktop Entry]
+_Name=VK
+Comment=Simple Morph based alternative vk.com WebApp
+Exec=qmlscene %U qml/Main.qml --scaling --software --enable-embedded-switches
+Icon=assets/icon.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+
+X-Ubuntu-Splash-Color=#111111
+X-Ubuntu-Splash-Image=assets/icon-splash.png
