@@ -10,7 +10,7 @@ Inspired by https://github.com/mateosalta/cuddly-bassoon
 
 ### Click for Ubuntu Phones
 
-- Search "Instagraph" in the OpenStore and install the app
+- Search "VK" in the OpenStore and install the app
 - Direct download ".click" package from the OpenStore
 
 [![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/vkontakte.redfox3)
