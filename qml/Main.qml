@@ -23,6 +23,7 @@ import Qt.labs.settings 1.0
 import QtSystemInfo 5.5
 import QtQuick.Controls 2.2
 import "UCSComponents"
+import Ubuntu.Components.Popups 1.3
 
 ApplicationWindow {
   id: window
@@ -115,6 +116,29 @@ ApplicationWindow {
         }
       } else {
         Qt.openUrlExternally(url)
+      }
+    }
+
+    onFileDialogRequested: function(request) {
+      switch (request.mode) {
+        case FileDialogRequest.FileModeOpen:
+          request.accepted = true;
+          var fileDialogSingle = PopupUtils.open(Qt.resolvedUrl("ContentPickerDialog.qml"), this);
+          fileDialogSingle.allowMultipleFiles = false;
+          fileDialogSingle.accept.connect(request.dialogAccept);
+          fileDialogSingle.reject.connect(request.dialogReject);
+          break;
+        case FileDialogRequest.FileModeOpenMultiple:
+          request.accepted = true;
+          var fileDialogMultiple = PopupUtils.open(Qt.resolvedUrl("ContentPickerDialog.qml"), this);
+          fileDialogMultiple.allowMultipleFiles = true;
+          fileDialogMultiple.accept.connect(request.dialogAccept);
+          fileDialogMultiple.reject.connect(request.dialogReject);
+          break;
+        case FilealogRequest.FileModeUploadFolder:
+        case FileDialogRequest.FileModeSave:
+          request.accepted = false;
+          break;
       }
     }
   }
