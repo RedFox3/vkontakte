@@ -232,7 +232,7 @@ ApplicationWindow {
   }
 
   Connections {
-    target: webview
+    target: webView
 
     onIsFullScreenChanged: {
       console.log('onIsFullScreenChanged:')
