@@ -1,8 +1,25 @@
 # VK
+[![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![GitHub issues](https://img.shields.io/github/issues/RedFox3/vkontakte.svg)](https://github.com/RedFox3/vkontakte/issues)
 
 Simple Morph based alternative vk.com WebApp
 
 Inspired by https://github.com/mateosalta/cuddly-bassoon
+
+## Installation
+
+### Click for Ubuntu Phones
+
+- Search "Instagraph" in the OpenStore and install the app
+- Direct download ".click" package from the OpenStore
+
+[![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/vkontakte.redfox3)
+
+## Building for Ubuntu Touch
+
+Simply use [clickable](https://clickable-ut.dev/en/latest/) command line
+
+	$ clickable
 
 ## License
 
