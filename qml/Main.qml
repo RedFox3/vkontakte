@@ -171,7 +171,9 @@ ApplicationWindow {
         id: menu
         iconName: "navigation-menu"
         onTriggered: {
-          webView.url = 'https://m.vk.com/menu'
+          // Deprecated
+          // webView.url = 'https://m.vk.com/menu'
+          webView.runJavaScript("document.querySelector(\"a[data-tabbar='menu']\").click();");
         }
         text: qsTr("Menu")
       },
@@ -180,7 +182,9 @@ ApplicationWindow {
         id: notifications
         iconName: "notification"
         onTriggered: {
-          webView.url = 'https://m.vk.com/feed?section=notifications'
+          // Deprecated
+          // webView.url = 'https://m.vk.com/feed?section=notifications'
+          webView.runJavaScript("document.querySelector(\"a[data-tabbar='notification']\").click();");
         }
         text: qsTr("Notifications")
       },
@@ -189,7 +193,9 @@ ApplicationWindow {
         id: mail
         iconName: "message"
         onTriggered: {
-          webView.url = 'https://m.vk.com/mail'
+          // Deprecated
+          // webView.url = 'https://m.vk.com/mail'
+          webView.runJavaScript("document.querySelector(\"a[data-tabbar='messages']\").click();");
         }
         text: qsTr("Mail")
       },
@@ -198,7 +204,9 @@ ApplicationWindow {
         id: recommended
         iconName: "find"
         onTriggered: {
-          webView.url = 'https://m.vk.com/feed?section=recommended'
+          // Deprecated
+          // webView.url = 'https://m.vk.com/feed?section=recommended'
+          webView.runJavaScript("document.querySelector(\"a[data-tabbar='recommend']\").click();");
         }
         text: qsTr("Recommended")
       },
@@ -207,7 +215,9 @@ ApplicationWindow {
         id: feed
         iconName: "event"
         onTriggered: {
-          webView.url = 'http://m.vk.com/feed'
+          // Deprecated
+          // webView.url = 'http://m.vk.com/feed'
+          webView.runJavaScript("document.querySelector(\"a[data-tabbar='feed']\").click();");
         }
         text: qsTr("Feed")
       },
