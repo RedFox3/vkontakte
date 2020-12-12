@@ -104,9 +104,9 @@ ApplicationWindow {
 
       var url = request.requestedUrl.toString()
       // Handle redirection links
-      if (url.startsWith('https://www.vk.com')) {
+      if (url.startsWith('https://m.vk.com') || url.startsWith('https://vk.com')) {
         // Get query params
-        var reg = new RegExp('[?&]q=([^&#]*)', 'i');
+        var reg = new RegExp('[?&]to=([^&#]*)', 'i');
         var param = reg.exec(url);
         if (param) {
           console.log("url to open:", decodeURIComponent(param[1]))
