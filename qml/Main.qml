@@ -60,6 +60,9 @@ ApplicationWindow {
     settings.fullScreenSupportEnabled: true
     property var currentWebView: webView
     settings.pluginsEnabled: true
+    // setting it to false, because "true" opens the PDF viewer extension but makes it difficult to download the pdf (only possible with context menu)
+    // furthermore pages saved as PDF would not be downloaded but only displayed as PDF
+    settings.pdfViewerEnabled: false
 
     onFullScreenRequested: function(request) {
       nav.visible = !nav.visible
@@ -88,6 +91,11 @@ ApplicationWindow {
         }
       ]
       */
+
+      // TODO: Replace this crutch with inapp download
+      onDownloadRequested: function(download) {
+        Qt.openUrlExternally(download.url)
+      }
     }
 
     url: "https://www.vk.com"
