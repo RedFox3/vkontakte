@@ -3,6 +3,7 @@
       "webview",
       "networking",
       "audio",
+      "microphone",
       "video",
       "keep-display-on",
       "content_exchange",

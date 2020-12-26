@@ -149,6 +149,16 @@ ApplicationWindow {
           break;
       }
     }
+
+    onFeaturePermissionRequested: {
+      switch(feature) {
+        case WebEngineView.MediaAudioCapture:
+        case WebEngineView.MediaVideoCapture:
+        case WebEngineView.MediaAudioVideoCapture:
+          grantFeaturePermission(securityOrigin, feature, true)
+          break;
+      }
+    }
   }
 
   RadialBottomEdge {
